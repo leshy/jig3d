@@ -9,7 +9,9 @@ Procedural 3D modelling in short Python scripts, built for AI agents. Hard-surfa
 
 ## Install
 
-Python 3.12+, [`uv`](https://docs.astral.sh/uv/), and [`f3d`](https://f3d.app) for rendering.
+`pip install jig3d` (or `uv add jig3d`). Rendering needs [`f3d`](https://f3d.app).
+
+From source: Python 3.12+, [`uv`](https://docs.astral.sh/uv/), and [`f3d`](https://f3d.app) for rendering.
 
 ```bash
 uv sync --extra dev
@@ -28,7 +30,19 @@ uv run jig cost my_model.py                             # per-line triangle cost
 uv run jig build my_model.py -o out/my_model.glb        # final .glb
 ```
 
-See [`examples/`](examples) for complete models.
+See [`examples/`](examples) for complete models. Each image below is the `jig view` contact sheet for one example.
+
+[`eva_helmet.py`](examples/eva_helmet.py): creased SubD shell and visor, hard-surface comms pod and headlamp
+
+![eva_helmet](https://raw.githubusercontent.com/leshy/jig3d/main/docs/img/eva_helmet.png)
+
+[`inline_valve.py`](examples/inline_valve.py): one script, three pipe sizes; lathe, sweep, bolted flanges, handwheel
+
+![inline_valve](https://raw.githubusercontent.com/leshy/jig3d/main/docs/img/inline_valve.png)
+
+[`wall_intercom.py`](examples/wall_intercom.py): hard-surface panel, screen, speaker grille, keys
+
+![wall_intercom](https://raw.githubusercontent.com/leshy/jig3d/main/docs/img/wall_intercom.png)
 
 ## Docs
 
