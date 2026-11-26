@@ -15,7 +15,7 @@ jobs:
         with:
           fetch-depth: 0 # hatch-vcs reads the version from the tag
       - uses: astral-sh/setup-uv@v6
-      - run: uv sync --extra dev
+      - run: uv sync --locked --extra dev
       - run: uv run pytest
       - run: uv build
       - uses: pypa/gh-action-pypi-publish@release/v1
